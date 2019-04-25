@@ -10,7 +10,20 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="736">
+                <caret line="32" column="171" selection-start-line="32" selection-start-column="171" selection-end-line="32" selection-end-column="171" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -64,7 +77,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/resources/static/js/basket.js" />
         <option value="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" />
         <option value="$PROJECT_DIR$/src/test/java/training360/bitsnbytes/rubberduck/product/ProductsDaoTest.java" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/index.js" />
@@ -115,6 +127,7 @@
         <option value="$PROJECT_DIR$/src/main/resources/static/userprofile.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/users.html" />
         <option value="$PROJECT_DIR$/src/main/resources/static/js/menu.js" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -129,7 +142,7 @@
       <select />
     </treeState>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="950" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
@@ -246,7 +259,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556211778077" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1556212229594" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
   </component>
@@ -650,6 +663,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49924812" visible="true" weight="0.1624161" />
       <window_info id="Structure" order="1" sideWeight="0.50075185" side_tool="true" weight="0.14966443" />
@@ -671,7 +685,7 @@
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.3286119" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.26345608" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.23229462" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -785,13 +799,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="buttons size, font family to css" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="64">
-          <caret line="106" column="5" selection-start-line="106" selection-start-column="5" selection-end-line="106" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/css/adminproducts.css">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="46">
@@ -1160,6 +1167,16 @@
     <entry file="file://$PROJECT_DIR$/src/main/resources/static/js/orders.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1699" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="736">
+            <caret line="32" column="171" selection-start-line="32" selection-start-column="171" selection-end-line="32" selection-end-column="171" />
+          </first_editor>
+          <second_editor />
+        </state>
       </provider>
     </entry>
   </component>
