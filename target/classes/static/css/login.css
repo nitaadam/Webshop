@@ -1,0 +1,122 @@
+header {
+    visibility: hidden;
+}
+
+body {
+    background: url(../img/login.jpg) no-repeat;
+    background-size: cover;
+}
+
+input[type=text],
+input[type=password] {
+  width: 30%;
+  padding: 15px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+#submit {
+  background-color: #f1f1f1;
+  font-size: 18px;
+}
+
+label {
+  width: 100%;
+}
+
+main {
+  margin-left: 150px;
+  padding: 16px;
+  color: #f1f1f1;
+  font-family: "Ubuntu",sans-serif;
+}
+
+
+
+
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0);
+    transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-30px);
+    transform: translateY(-30px);
+  }
+  60% {
+    -moz-transform: translateY(-15px);
+    transform: translateY(-15px);
+  }
+}
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  40% {
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+  60% {
+    -webkit-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
+}
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+  }
+  40% {
+    -moz-transform: translateX(-30px);
+    -ms-transform: translateX(-30px);
+    -webkit-transform: translateX(-30px);
+    transform: translateX(-30px);
+  }
+  60% {
+    -moz-transform: translateX(-15px);
+    -ms-transform: translateX(-15px);
+    -webkit-transform: translateX(-15px);
+    transform: translateX(-15px);
+  }
+}
+
+i {
+  display: block;
+  color: #fff;
+  font-size: 5px;
+}
+
+.icon-text {
+    font-size: 23px;
+    position: absolute;
+    top: 21.8px;
+    left: 40px;
+}
+
+.arrow bounce {
+  position: absolute;
+  color: #f1f1f1;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 60px; /*change with size of arrow to make sit on bottom */
+/*   background-image: url(); */
+/*   background-size: contain; */
+}
+
+.bounce {
+  -moz-animation: bounce 2s infinite;
+  -webkit-animation: bounce 2s infinite;
+  animation: bounce 2s infinite;
+  color: #f1f1f1;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 50px;
+}
+
+

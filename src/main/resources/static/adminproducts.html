@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Termékadminisztráció</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/menu.css"/>
+    <link rel="stylesheet" href="css/adminproducts.css"/>
+</head>
+<body>
+
+<header id="header">
+    <!--<div id="nav-div">-->
+    <!--</div>-->
+</header>
+<main>
+<h1 class="container">Termékadminisztráció</h1>
+<br>
+<div id="message-div"></div>
+<br>
+
+
+<h4>Új termék felvétele</h4><br>
+<form id="create-form">
+    <input type="text" id="name-input" placeholder="Név" required>
+    <input type="text" id="code-input" placeholder="Kód" required>
+    <input type="text" id="manuf-input" placeholder="Gyártó" required>
+    <input type="number" id="price-input" placeholder="Ár" min="1" max="2000000" required>
+    <select id="category-input" class="mdb-select md-form" style="height: 26.8px;">
+        <option value="" selected>--Kategória--</option>
+    </select>
+    <input type="button" id="loadFileXml" value="Képfeltöltés" onclick="document.getElementById('file').click();" />
+    <input type="file" style="display:none;" id="file" name="file"/>
+    <input type="submit" value="Termék hozzáadása" class="btn btn-warning">
+</form>
+
+    <br>
+
+    <div class="check-box">
+        <input type="checkbox" class="check-input" id="active-filter">
+        <label class="check-label" for="active-filter" style="font-size: 1.1rem;">Aktív termékek listázása</label>
+
+        <input type="checkbox" class="check-input" id="deleted-filter">
+        <label class="check-label" for="deleted-filter" style="font-size: 1.1rem;">Törölt termékek listázása</label>
+    </div>
+
+<br>
+<br>
+
+    <h4>Terméklista</h4><br>
+<table  class="table table-hover">
+    <thead>
+    <tr>
+        <th>Név</th>
+        <th>Termékkód</th>
+        <th>Url</th>
+        <th>Gyártó</th>
+        <th>Kategória</th>
+        <th>Ár</th>
+        <th>Státusz</th>
+        <!--<th>Képfeltöltés</th>-->
+        <th></th>
+        <th></th>
+    </tr>
+    </thead>
+    <tbody id="product-table"></tbody>
+
+</table>
+
+</main>
+
+<script src="js/menu.js"></script>
+<script src="js/adminproducts.js"></script>
+
+</body>
+</html>

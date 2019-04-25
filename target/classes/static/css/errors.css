@@ -1,0 +1,24 @@
+* {
+   font-family: "Ubuntu",sans-serif;
+}
+
+header {
+    visibility: hidden;
+}
+
+ .center {
+  font-size: 25px;
+  padding: 20px;
+   margin: auto;
+   width: 30%;
+   padding: 10px;
+ }
+
+ .container {
+    align: center;
+    text-align: center;
+ }
+
+ p {
+    font-size: 25px;
+ }

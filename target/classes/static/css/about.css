@@ -1,0 +1,24 @@
+body {
+    height: 100%;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body::after {
+    background: url("/img/swimmingduck.jpg");
+    background-size: 100% 100%;
+    content: "";
+    opacity: 0.9;
+    filter: brightness(1);
+    filter: contrast(1);
+    filter: blur(2px);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+header {
+    color: #2D388A;
+}

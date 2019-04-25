@@ -1,0 +1,140 @@
+body {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+header {
+    margin-bottom: 150px;
+    color: #4b6892;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: 30em;
+}
+
+.navigationbar {
+  background-color: white;
+  top: 0;
+  width: 100%;
+  transition: 0.4s;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 99;
+  box-shadow: 0.5px 0.5px 0.5px 0 grey, 0.5px 0.5px 2.5px 0 #212121;
+}
+
+.navigationbar a {
+  float: left;
+  text-align: center;
+  padding-left: 20px;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+#greeting {
+  float: right;
+}
+
+.dropdown {
+  float: left;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 10px;
+}
+
+.dropdown_logout,
+ .dropdown_basket {
+  float: right;
+  color: #4b6892;
+  overflow: hidden;
+  padding-right: 20px;
+  border-radius: 10px;
+}
+
+.dropdown .dropbtn,
+.dropdown_logout .dropbtn,
+.dropdown_basket .dropbtn {
+  border: none;
+  outline: none;
+  color: #4b6892;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  content: attr(basket-item-counter);
+  width: inherit;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+  border-radius: 10px;
+  width: 250px;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #4b6892;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: center;
+}
+
+.dropdown-content a:hover {
+  color: #4b6892;
+  background-color: #ffee58;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+.dropdown:hover .dropdown-content,
+.dropdown_logout:hover .dropdown-content,
+ .dropdown_basket:hover .dropdown-content{
+  display: block;
+  border-radius: 10px;
+  text-decoration: none;
+}
+
+$shopping-cart-red: #DF0000;
+
+.fa-stack[data-count]:after{
+  position:absolute;
+  right:0%;
+  top:0%;
+  content: attr(data-count);
+  font-size:40%;
+  padding:.6em;
+  border-radius:999px;
+  line-height:.75em;
+  color: white;
+  color:$shopping-cart-red;
+  text-align:center;
+  min-width:2em;
+  font-weight:bold;
+  background: white;
+  border-style:solid;
+}
+.fa-circle {
+  color:#DF0000;
+}
+
+.red-cart {
+	color: #4b6892; background:white;
+}
+
+/*
+footer {
+     bottom: 0;
+     width: 100%;
+    transition: 0.4s;
+     position: fixed;
+     width: 100%;
+     z-index: 99;
+     background-color: black;
+}
+*/

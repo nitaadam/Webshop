@@ -1,0 +1,110 @@
+body {
+    height: 100%;
+    font-family: "Ubuntu", sans-serif;
+}
+
+body::after {
+    background: url("/img/bggggr.jpg");
+    background-size: 100% 100%;
+    content: "";
+    opacity: 0.9;
+    filter: brightness(1);
+    filter: contrast(1);
+    filter: blur(2px);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+header {
+    color: #2D388A;
+}
+
+main {
+    margin-bottom: 50em;
+    margin-bottom: 40em;
+    color: #3C3D3E;
+    font-family: "Ubuntu",sans-serif;
+}
+
+.main-div {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.product {
+    background-color: white;
+    position: relative;
+    height: 100%;
+    color: black;
+    float: left;
+    width: 28%;
+    margin: 25px;
+    padding: 20px;
+    border-radius: 35px;
+    box-shadow: 2px 2px 2px 0 grey, 1px 2px 5px 0 #212121;
+
+}
+
+.product:hover, .product:active{
+    border-color: white;
+    transform: scale(1.1);
+    transition-duration: 0.25s;
+    box-shadow: 4px 6px 15px 0 grey, 2px 6px 15px 0 #212121;
+}
+
+.lastProducts{
+    text-align: center;
+}
+
+.name{
+    color: black;
+}
+
+.small_pics{
+    height: 10rem;
+    width: 10rem;
+    display: block;
+}
+
+img{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.product_name, .product_price{
+    font-size: 150%;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    color: black;
+}
+
+#last3div{
+    width: 32rem;
+    margin: 0 auto;
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon{
+    color: black;
+}
+
+.productsTitle, .lastProducts{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.name{
+    text-shadow: 2px 2px 4px #A4A4A4;
+}
+
+#carousel-example-2{
+    border-radius: 35px;
+    background-color: white;
+    max-height: 40rem;
+    width: 35rem;
+}

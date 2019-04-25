@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Főoldal</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+    <link rel="stylesheet" href="css/index.css"/>
+    <link rel="stylesheet" href="css/menu.css"/>
+</head>
+<body>
+<header id="header">
+</header>
+<main>
+    <div class="container">
+        <div id="last3div">
+        <div id="carousel-example-2" class="carousel slide carousel-fade border border-dark" data-ride="carousel" data-interval="4000" style="box-shadow: 2px 2px 2px 0 grey, 1px 2px 5px 0 #212121; border-color: white;">
+            <h2 class="lastProducts">Utoljára vásárolt termékeink</h2>
+            <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-2" data-slide-to="1"></li>
+                    <li data-target="#carousel-example-2" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <div class="view">
+                            <img id="first-img" class="d-block" style="width:25rem;height:25rem">
+                        </div>
+                        <div class="carousel-caption">
+                            <a id="link1" style="text-decoration:none;">
+                                <h3 id="first-name" class="h3-responsive"></h3>
+                            </a>
+                        </div>
+                        <div style="height:7rem"></div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="view">
+                            <img id="second-img" class="d-block" style="width:25rem;height:25rem">
+                        </div>
+                        <div style="height:7rem"></div>
+                        <div class="carousel-caption">
+                            <a id="link2" style="text-decoration:none;">
+                                <h3 id="second-name" class="h3-responsive"></h3>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="carousel-item">
+                        <div class="view">
+                            <img id="third-img" class="d-block" style="width:25rem;height:25rem">
+                        </div>
+                        <div style="height:7rem"></div>
+                        <div class="carousel-caption">
+                            <a id="link3" style="text-decoration:none;">
+                                <h3 id="third-name" class="h3-responsive"></h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+        <br>
+        <h2 class="productsTitle" align="center">Termékeink</h2>
+        <br>
+        <select id="category-input" class="browser-default custom-select col-sm-3" >
+            <option selected disabled>--Válassz kategóriát!--</option>
+            <option value="all">Minden kategória</option>
+        </select>
+        <br>
+        <br>
+        <div id="message-div"></div>
+
+        <div id="main-div">
+
+        </div>
+
+    </div>
+</main>
+
+<script src="js/index.js"></script>
+<script src="js/menu.js"></script>
+
+</body>
+</html>

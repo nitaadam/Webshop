@@ -1,0 +1,64 @@
+body {
+  color: rgb(0, 0, 0);
+  font-family: "Ubuntu",sans-serif;
+}
+
+body::after {
+    background: url("/img/bggggr.jpg");
+    background-size: 100% 100%;
+    content: "";
+    filter: brightness(1.9);
+    filter: contrast(1.6);
+    filter: blur(2px);
+    position: fixed;
+    opacity: 0.5;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+main {
+    margin-right: 60px;
+    margin-left: 60px;
+    margin-bottom: 40em;
+    color: #3C3D3E;
+    font-family: "Ubuntu",sans-serif;
+}
+
+.basket-container{
+    padding-top: 10px;
+    /*padding-left: 100px;
+    padding-right: 100px;*/
+}
+
+#textarea-div{
+    padding: 20px;
+}
+
+#delivery-datas{
+    margin-top: 20px;
+    margin-left: 40px;
+    margin-bottom: 30px;
+}
+
+#new-delivery-address{
+    margin-top: 10px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.radio-button{
+    margin-right: 15px;
+}
+
+#empty-basket-button{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+#order-button{
+    margin-left: 20px;
+    margin-right: 20px;
+}

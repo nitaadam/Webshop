@@ -1,0 +1,29 @@
+body {
+  color: rgb(0, 0, 0);
+  font-family: "Ubuntu",sans-serif;
+}
+
+ body::after {
+     background: url("/img/blueish.png");
+     background-size: 100% 100%;
+     content: "";
+     filter: brightness(1.9);
+     filter: contrast(1.6);
+     filter: blur(5px);
+     opacity: 0.4;
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     z-index: -1;
+ }
+
+main {
+    margin-bottom: 40em;
+    margin-right: 60px;
+    margin-left: 60px;
+    width: 70%;
+    color: #3C3D3E;
+    font-family: "Ubuntu",sans-serif;
+}

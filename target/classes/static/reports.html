@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Riportok</title>
+    <link rel="stylesheet" href="css/report.css"/>
+    <link rel="stylesheet" href="css/menu.css"/>
+</head>
+<body>
+
+<header id="header">
+</header>
+
+<main>
+    <div class="container">
+
+        <h1 class="container">Riportok</h1>
+
+        <div id="main-div">
+            <br>
+            <h5>Összes megrendelés állapot szerint, havi bontásban:</h5>
+            <br>
+                <table class="reports-table">
+                    <thead>
+                        <tr>
+                            <th>Hónap</th>
+                            <th>Státusz</th>
+                            <th>Rendelések száma</th>
+                            <th>Összérték</th>
+                        </tr>
+                    </thead>
+                    <tbody id="report1-table-body">
+
+                    </tbody>
+                </table>
+
+            <br>
+            <br>
+            <br>
+
+            <br>
+            <h5>Kiszállított megrendelések termék szerint, havi bontásban:</h5>
+            <br>
+
+            <table class="reports-table">
+                <thead>
+                <tr>
+                    <th>Hónap</th>
+                    <th>Termékkód</th>
+                    <th>Darabszám</th>
+                    <th>Egységár</th>
+                    <th>Összérték</th>
+                </tr>
+                </thead>
+                <tbody id="report2-table-body">
+
+                </tbody>
+            </table>
+
+        </div>
+
+    </div>
+</main>
+
+<script src="js/report.js"></script>
+<script src="js/menu.js"></script>
+
+</body>
+</html>

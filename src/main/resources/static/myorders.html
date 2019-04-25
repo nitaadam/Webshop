@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/myorders.css"/>
+    <link rel="stylesheet" href="css/menu.css"/>
+    <title>Megrendelések</title>
+</head>
+<body>
+
+<header id="header">
+</header>
+
+<main>
+<div class="container">
+    <h1 class="container">Megrendelések</h1>
+
+    <div id="message-div"></div>
+
+    <div id="main-div"></div>
+    <div id="template" style="display: none">
+        <div id="order-list">
+            <div class="col-md-12">
+                <center>
+                    <div class="col-md-6">
+                        <div class="panel-group" id="accordion5" role="tablist" aria-multiselectable="true">
+                            {{#each orders}}
+                            <div class="panel panel-default">
+                                <div class="panel-heading" role="tab" id="headingOne5-{{id}}">
+                                    <h4 class="panel-title">
+                                        <p role="button" class="collapsed" data-toggle="collapse" data-parent="#accordion5" href="#order-{{id}}" aria-expanded="false" aria-controls="order-{{id}}">
+                                            {{dateformatter date}}  -   {{modifStatus orderStatus}}
+                                        </p>
+                                    </h4>
+                                </div>
+                                <div id="order-{{id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne5-{{id}}">
+                                    <div class="panel-body">
+                                        <div class="inner-data">
+                                            {{#each orderItemList}}
+                                            <P>Termék neve: {{product.name}} <br> Megrendelt mennyiség: {{quantity}} db <br> Termék egységára: {{product.price}} Ft </P>
+                                            {{/each}}
+                                            <p>Rendelés összértéke: {{sum}} Ft</p>
+                                        </div>
+                                        <div class="delivery-address">
+                                            <p>Szállítási cím: {{deliveryAddress}}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {{/each}}
+                        </div>
+                    </div>
+                </center>
+            </div>
+        </div>
+    </div>
+</div>
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.1/handlebars.min.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/myorders.js"></script>
+</body>
+</html>

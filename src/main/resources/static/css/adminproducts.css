@@ -1,0 +1,49 @@
+body {
+    color: #535457;
+    font-family: "Ubuntu",sans-serif;
+    margin: auto;
+ }
+
+ body::after {
+     background: url("/img/blueish.png");
+     background-size: 100% 100%;
+     content: "";
+     filter: brightness(1.9);
+     filter: contrast(1.6);
+     filter: blur(5px);
+     opacity: 0.4;
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     z-index: -1;
+ }
+
+ main {
+    margin-right: 60px;
+    margin-left: 60px;
+     margin-bottom: 40em;
+     color: #3C3D3E;
+     font-family: "Ubuntu",sans-serif;
+ }
+
+fieldset {
+    font-size: 1em;
+    padding: 0.5em;
+    border-radius: 1em;
+}
+
+label, input, select, button {
+    font-size: inherit;
+    padding: 0.2em;
+    margin: 0.1em 0.2em;
+    /* the following ensures they're all using the same box-model for rendering */
+    -moz-box-sizing: content-box;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+td {
+   width: 210px;
+}

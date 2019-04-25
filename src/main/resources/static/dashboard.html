@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboard.css"/>
+    <link rel="stylesheet" href="css/menu.css"/>
+</head>
+<body scroll="yes">
+
+<header id="header"></header>
+<main>
+<div class="chart-container">
+
+    <div class="dashboard" id="user">
+    </div>
+    <br><br>
+    <div class="my-chart-part1">
+        <div class="users">
+            <label>Termékek</label>
+            <label id="message-product"></label></div>
+
+        <canvas  id="chartOne" style="display: inline-block; width: 400px; height: 380px;"></canvas>
+    </div>
+
+    <div class="my-chart-part2">
+        <div class="orders">
+            <label>Megrendelések</label> <label id="orders"></label>
+            <label id="message-order"></label></div>
+
+        <canvas  id="chartTwo" style="display: inline-block; width: 400px; height: 380px;"></canvas>
+    </div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+</main>
+
+<script src="js/dashboard.js"></script>
+<script src="js/menu.js"></script>
+
+</body>
+</html>

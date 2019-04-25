@@ -1,0 +1,44 @@
+meter[value="1"]::-webkit-meter-optimum-value { background: rgb(212, 64, 64); }
+meter[value="2"]::-webkit-meter-optimum-value { background: #F2D215; }
+meter[value="3"]::-webkit-meter-optimum-value { background: rgb(243, 165, 63); }
+meter[value="4"]::-webkit-meter-optimum-value { background: rgb(93, 179, 59); }
+meter { width: 15%; }
+
+body::after {
+    background: url("/img/blueish.png");
+    background-size: 100% 100%;
+    content: "";
+    filter: brightness(1.9);
+    filter: contrast(1.6);
+    filter: blur(2px);
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+main {
+    color: #3C3D3E;
+    font-family: "Ubuntu",sans-serif;
+}
+
+input[type=text],
+input[type=password] {
+  width: 30%;
+  padding: 15px;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+#submit {
+  background-color: #f1f1f1;
+  font-size: 18px;
+}
+
+label {
+  width: 100%;
+}
+

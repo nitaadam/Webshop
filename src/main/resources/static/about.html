@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <title>Rólunk</title>
+    <link rel="stylesheet" href="css/about.css"/>
+    <link rel="stylesheet" href="css/menu.css"/>
+</head>
+<body>
+
+<header id="header">
+
+</header>
+
+<div id="main" role="main" class="container">
+    <h2>Rólunk</h2>
+    <p>
+        A webshop gyakorlás céljából készült a Training360 szoftverfejlesztői
+        képzés keretein belül.<br />Egy olyan háromrétegű alkalmazást
+        fejlesztettünk, ami webes frontenddel rendelkezik (HTML, CSS, JS). Ez
+        restful web szolgáltatásokkal kapcsolódik a backendhez, amely egy Java
+        alkalmazás Spring Boot-tal (tehát Spring keretrendszerben dolgoztunk).
+        Ennek 3 rétege van; a prezentációs réteg restful végpontokkal, az üzleti
+        logika réteg, illetve a perzisztens réteg, ami JDBC-vel kapcsolódik a
+        mySql adatbázishoz (relációs = kapcsolati viszony). Az alkalmazást
+        általunk írt integrációs tesztekkel és Postman-ből teszteltük.<br />Arról,
+        hogy pontosan mi volt a feladat és milyen funkciók elérhetők az oldalon,
+        lentebb olvashatsz.
+    </p>
+    <h4>És hogy miért éppen gumikacsa?</h4>
+    <p>
+        A gumikacsás debugging technológia sok programozót rávilágított már a
+        hibájára.
+    </p>
+    <p>
+        <i>'Ugyan már, hogyan lehetne segítségünkre egy gumikacsa?'</i> -
+        gondolhatod.. hát így:
+    </p>
+    <ol>
+        <li>Először is szerezzünk be egy számunkra szimpatikus gumikacsát!</li>
+        <li>Kiskacsánkat ültessük le magunk mellé, ha nem működik a kódunk.</li>
+        <li>
+            Kezdjük el sorról sorra elmagyarázni, hogy mit is csinál a kódunk
+            (illetve mit <i>akarunk</i> csinálni a kódunkkal).
+        </li>
+        <li>
+            Magyarázat közben jó eséllyel rá fogunk jönni, hogy valójában nem is
+            azt írtuk meg, amit szerettünk volna, és könnyedén kijavíthatjuk.
+        </li>
+    </ol>
+    <p>
+        Így működik a gumikacsa debugging - helyettesíthető lehetne egy
+        munkatárssal is, de ki szereti a hibáit beismerni a munkatársainak?
+        &#128540;
+    </p>
+
+    <h4>Egy kis ízelítőért próbáld ki a cyberkacsánkat!</h4>
+    <br>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+
+    <script type="text/javascript" src="js/termlib.js"></script>
+
+    <script type="text/javascript" src="js/cyberduckbot.js"></script>
+
+    <script type="text/javascript" src="js/cyberduckdata.js"></script>
+
+    <script type="text/javascript" src="js/cyberduck.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="css/cyberduck.css" />
+
+    <center>
+        <table border="0" cellspacing="10" cellpadding="0" width="100%">
+            <tr>
+                <td align="center">
+                    <a
+                            style="display:none;"
+                            href="#"
+                            class="termopen"
+                            id="termOpenLink"
+                    >Open CYBERDUCK terminal&nbsp;</a
+                    >
+                </td>
+            </tr>
+            <tr>
+                <td align="center" valign="top" height="370">
+                    <div id="cyberduckDiv" style="position:relative;"></div>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+    <script>
+        $(document).ready(function() {
+          termOpen();
+        });
+      </script>
+    <br>
+    <br>
+    <h4>A webshop funkciói</h4>
+    <p>
+        A követelményeket lebontva az egyes aloldalakra itt találod.<br /><i
+    >(A 'Rólunk' menüpont egyéni döntés alapján lett hozzáadva, nem volt
+        elvárás.)</i
+    >
+    </p>
+    <ul>
+        <li>
+            <b>Főoldal</b>
+            <p>
+                A termékek táblázatos formában kerülnek megjelenítésre, név, majd
+                gyártó alapján rendezve, kategória szerint csoportosítva - az
+                adatbázisban megadott kategóriák sorrendje alapján (először az
+                összes kategória összes terméke megjelenik, de lehet külön szűrni az
+                egyes kategóriákra - ez nem frontend oldalon történik, hanem
+                adatbázis szinten). A termékre kattintva annak részletező oldalára
+                (termékoldalra) jutunk.<br />Az oldal a / címen elérhető, RESTful
+                végpont: /products.<br />A főoldalon egy elkülönített részen
+                megjelenik egy ajánlás az utolsó 3 vásárolt termékkel
+                (véletlenszerűen).
+            </p>
+        </li>
+        <li>
+            <b>Termékoldal</b>
+            <p>
+                Az oldal a /product.html?address={address} címen elérhető, RESTful
+                végpont a /products/{address}, ahol az első paraméter a termék címe.
+                A termék adatai tételesen kerülnek kiírásra.<br />A terméket kosárba
+                lehet tenni, akár többet is.<br />Megjelennek a termékről írt
+                értékelések (<i>az értékelésekről bővebben lentebb</i>).
+            </p>
+        </li>
+        <li>
+            <b>Regisztráció</b>
+            <p>
+                A felhasználó regisztrálhatja magát: meg kell adnia a
+                felhasználónevét, a viselt nevét és a jelszót és minden adat
+                kötelező. A felhasználónévnek egyedinek kell lennie.<br />Elérhető a
+                /register.html oldalon, ami a /users végpontot hívja POST
+                metódussal. A jelszó hash-elve kerül letárolásra. Amennyiben már
+                létezik a felhasználónév, vagy nem elég erős a jelszó, a felhasználó
+                hibaüzenet kap a pontos problémáról.<br />Opcionális tétel volt
+                annak ellenőrzése, hogy a jelszó elég erős-e - ez implementálva
+                lett.
+            </p>
+        </li>
+        <li>
+            <b>Bejelentkezés, kijelentkezés</b>
+            <p>
+                Ha a felhasználó be szeretne jelentkezni, az alkalmazásba illő
+                megjelenéssel rendelező bejelentkező oldalt kap. Hibás adatok
+                bevitele esetén megjelenik egy hibaüzenet az mezők fölött.<br />
+                Kijelentkezés után a felhasználó a bejelentkezési oldalra jut.
+            </p>
+        </li>
+        <li>
+            <b>Hibaoldalak</b>
+            <p>
+                Ha a felhasználó hibás url-t ír be, vagy olyan oldalra hivatkozik,
+                mely nem létezik, informatív, az alkalmazásba illő megjelenéssel
+                rendelező hibaoldalt kap.
+            </p>
+        </li>
+        <li>
+            <b>Szerepkör szerinti menü</b>
+            <p>
+                Minden oldalon megjelenik a felhasználó neve, és attól függően, hogy
+                milyen jogosultságokkal rendelkezik, megjelenik a hozzá tartozó
+                menü, gombok. Ha olyan oldal címét írja be, amelyhez bejelentkezés
+                szükséges, a rendszer automatikusan a bejelentkező oldalra
+                irányítja. Bejelentkezés nélkül a menüben van egy bejelentkezés,
+                bejelentkezett felhasználónál egy kijelentkezés menüpont. Egy
+                RESTful webszolgáltatás, mely visszaadja, hogy mi a bejelentkezett
+                felhasználó neve és jogosultsága. A JavaScriptnek kell az oldalon a
+                jogosultság alapján megjeleníteni a menüpontokat és felhasználói
+                elemeket.
+            </p>
+            <ul>
+                <li>
+                    Termék adminisztráció menüpont kizárólag admin felhasználónak
+                    jelenik meg. Látogatóként a termék adminisztráció címét beírva
+                    átirányít a bejelentkező oldalra.
+                </li>
+                <li>
+                    Kosárba helyezés gomb és kijelentkezés menüpont csak
+                    bejelentkezett felhasználónak jelenik meg.
+                </li>
+            </ul>
+        </li>
+        <br />
+        <li>
+            <b>Felhasználói profil</b>
+            <p>
+                A felhasználó módosíthatja a viselt nevét és a jelszavát.<br />A
+                felhasználónak kétszer kell megadnia a jelszót, és azoknak egyeznie
+                kell.<br />Ellenőrizni kell, hogy a jelszó elég erős-e: meg kell
+                adni legalább 8 karaktert, egy kisbetűnek, egy nagybetűnek és egy
+                számjegynek szerepelnie kell benne. A felhasználó hibaüzenet kap a
+                pontos problémáról, amennyiben: üresen hagyja a nevet, eltérő vagy
+                nem elég erős a két jelszó.<br />A jelszó egyezőség ellenőrzése a
+                szerver oldalon van.
+            </p>
+        </li>
+        <li>
+            <b>Felhasználó kosara, megrendelés</b>
+            <p>
+                A kosárba tett termékek listaszerűen kerülnek megjelenítésre, a
+                tételek és kosár összértékével együtt, az egyes termékeket törölni
+                lehet innen, s a kosarat is lehet üríteni. A kosár elérhető a
+                /basket.html címen, RESTful végpont: /basket. A felhasználó itt
+                tudja leadni a rendelést, ami után a kosár üres lesz. A rendeléshez
+                itt tud megadni szállítási címet (<i>erről bővebben lentebb</i>).
+                Üres kosár rendelése esetén hibaüzenetet kapunk.
+            </p>
+        </li>
+        <li>
+            <b>Szállítási cím megadása</b>
+            <p>
+                Megrendeléskor meg lehet adni szállítási címet is, többsorosat. Ez
+                mind a rendelések listázásakor, mind az adminisztrációs felületen
+                megjelenésre kerül. A felhasználó a rendeléskor már megadott
+                szállítási címek közül választhat. Amennyiben kétszer ugyanazt a
+                szállítási címet adta meg, csak egyszer kerül megjelenítésre.
+            </p>
+        </li>
+        <li>
+            <b>Felhasználó rendelései</b>
+            <p>
+                A rendelés leadása után a felhasználó a rendeléseim oldalon
+                megtekintheti a leadott rendeléseit, mely tartalmazza a rendelés
+                leadásának dátumát, és a megrendelt termékeket, dátum szerint sorba
+                vannak rendezve.<br />Rendelés: /myorders RESTful végponton, POST
+                metódussal. A rendelések listázása a /myorders.html címen, /myorders
+                RESTful végponton GET metódussal.
+            </p>
+        </li>
+        <li>
+            <b>Termékértékelés</b>
+            <p>
+                A termékhez bejelentkezett felhasználó értékelést tud írni, valamint
+                egy pontszámot tud adni (1-5 skálán). A beírt szövegben nem lehet
+                HTML kód. Az értékeléseket a termékoldalon tudja beírni, és ott is
+                jelennek meg, dátum szerint visszafelé. A felhasználó kizárólag a
+                saját értékelését szerkeszteni vagy törölni tudja. Csak olyan
+                felhasználó írhat termékértékelést, akinek az adott termékhez
+                kiszállított státuszban lévő rendelése van (ha olyan felhasználó
+                próbál értékelést hagyni, akinek nincs kiszállított olyan terméke,
+                hibaüzenetet kap). Az értékelést és pontszámot beírva az megjelenik
+                a termék lapon. Az értékelések dátum szerint visszafele sorrendben
+                jelennek meg.
+            </p>
+        </li>
+        <li>
+            <b>Termékadminisztráció</b>
+            <p>
+                Klasszikus CRUD felület, kizárólag adminnak jelenik meg tartalom az
+                oldalon. Elérhető az /adminproducts.html címen, RESTful végpont:
+                /products. A keresőbarát címet a rendszer automatikusan generálja
+                úgy, hogy az ékezetes karaktereket eltávolítja, a szóközöket
+                kötőjelre cseréli, majd az összes további karaktert eltávolítja.
+                (Keresőbarát név, ha a termék neve: 'phillips villanyborotva
+                szakállvágóval', akkor az a keresőbarát cím, amit tárolunk az
+                adatbázisban hogy 'phillips-villanyborotva-szakallvagoval'.) A
+                következő funkciók elérhetők:
+            </p>
+            <ul>
+                <li>
+                    Termékek listázása, nem azonos a vásárlók számára megjelenített
+                    oldallal.
+                </li>
+                <li>
+                    Új termék felvétele. Minden, az egyedi terméklapon megjelenő adat
+                    megadása kötelező. Kód és cím egyedi. Ár egész, és maximum 2M Ft.
+                </li>
+                <li>Termék adatainak módosítása (minden adat szerkeszthető)</li>
+                <li>
+                    Termék törlése (csak logikailag lehet törölni, hiszen később
+                    szerepelhet rendelésben)
+                </li>
+            </ul>
+        </li>
+        <br />
+        <li>
+            <b>Kategóriák</b>
+            <p>
+                Kategóriákat adminisztrálni lehet. Külön adminisztrációs felületen
+                kerülnek listázásra, a sorszámuk szerint sorba rendezve. Amennyiben
+                olyan sorszámot adunk meg, ami már létezik, az összes utána
+                következőt eggyel hátrébb tolja, ezzel az adott kategóriát középre
+                beszúrja. Nem adhatunk meg nagyobb kategória sorszámot, mint amennyi
+                éppen van. (Azaz nem lehet lyuk a számozásban.) Ha nem adunk meg
+                sorszámot, az adott kategória a legvégére kerül. Ugyanezek elvek
+                mentén lehet módosítani. Kategóriát lehet törölni is. Felületen
+                lehet újat felvenni, annak nevének és sorszámának megadásával. A név
+                megadása kötelező. Termék adminisztráció esetén, termék felvételekor
+                és módosításkor meg lehet adni kategóriát is. A kiválasztott
+                kategória megjelenik a termék oldalon. Nem szükséges minden
+                terméknek kategóriát megadni. A kategóriáknál el kell tárolni, hogy
+                milyen sorrendben jelenjenek meg.
+            </p>
+        </li>
+        <li>
+            <b>Felhasználókezelés</b>
+            <p>
+                A felhasználókat listázni lehet, ahol megjelennek az adatai
+                (felhasználónév, viselt név) - klasszikus CRUD felület, csak az
+                admin számára elérhető. A felhasználó viselt nevét és jelszavát
+                lehet módosítani, és ezeket kötelező megadni. Felhasználót lehet
+                törölni is, ilyenkor a hozzá kapcsolódó megrendelésből el kell
+                távolítani. A `/users` végpontot hívja.
+            </p>
+        </li>
+        <li>
+            <b>Összes megrendelés</b>
+            <p>
+                A rendeléseket listázni lehet, megjelenítésre kerül, hogy ki és
+                mikor adta le a megrendelést, valamint hány tétel van benne, és az
+                értékét - klasszikus CRUD felület, csak az admin számára elérhető. A
+                rendelés státuszát is megjelenik, ami alapesetben aktív. A
+                rendelések megjelenítési sorrendje alapértelmezetten a feladás ideje
+                szerint csökkenő. Amennyiben kiválasztja a felhasználó a rendelést,
+                megjelennek a benne szereplő termékek, egységárral. A megrendelést
+                lehet módosítani, de csak tételt lehet belőle törölni. A teljes
+                megrendelést törölni lehet (csak logikai törlés, ekkor a státusza
+                legyen törölt). Listázáskor szűrni lehet, hogy ne az összes, csak az
+                aktív státuszú megrendelés jelenjen meg. A rendelések listája
+                elérhető az `/orders.html` címen, `/orders` RESTful végponton.
+                Tételt törölni a `/orders/{id}/{address}` címen DELETE metódussal
+                lehet.
+            </p>
+        </li>
+        <li>
+            <b>Dashboard</b>
+            <p>
+                A /dashboard.html címen jelenik meg, /dashboard végponton:
+                felhasználók, termékek, megrendelések száma - mindez dinamikusan
+                változik az webshop aktivitása alapján. Az oldalon csak admin
+                felhasználó esetén jelenik meg tartalom.<br /><i
+            >A megjelenítés formája egyéni döntés volt.</i
+            >
+            </p>
+        </li>
+        <li>
+            <b>Riportok</b>
+            <p>
+                2 riportot tartalmaz: táblázatos formában megjelenítve, hogy havonta
+                mely termékből mennyi fogyott, kizárólag a kiszállított
+                megrendelések alapján.
+                <br />
+                A /reports.html címen jelenik meg. Az első a /reports/orders, a
+                másik a /reports/products végponton elérhető.
+            </p>
+            <dl>
+                <dt>Első riport</dt>
+                <dd>- Tartalmazza az összes megrendelés adatát</dd>
+                <dd>- Havi és állapot szerinti bontásban</dd>
+                <dd>
+                    - Új megrendeléskor, megrendelés módosításkor és törléskor
+                    változnak az adatok
+                </dd>
+                <dd>- Kiszámolásra kerül a megrendelések száma és összértéke</dd>
+                <dt>Második riport</dt>
+                <dd>- Csak a kiszállított megrendelések adatait tartalmazza</dd>
+                <dd>- Havi és termék szerinti bontásban</dd>
+                <dd>
+                    - Új megrendeléskor, megrendelés módosításkor és törléskor
+                    változnak az adatok
+                </dd>
+                <dd>
+                    - Kiírásra kerül a termék egységára, valamint a megrendelt
+                    darabszám és az összesített ár
+                </dd>
+            </dl>
+        </li>
+    </ul>
+    <br>
+    <br>
+</div>
+
+<script src="js/menu.js"></script>
+
+</body>
+</html>

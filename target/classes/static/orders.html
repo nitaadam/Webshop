@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/orders.css"/>
+    <link rel="stylesheet" href="css/menu.css"/>
+    <title>Megrendelések adminisztrációja</title>
+</head>
+<body>
+<header id="header">
+</header>
+<main>
+    <div class="container">
+        <h1 class="container">Megrendelések adminisztrációja</h1>
+
+        <div id="message-div"></div>
+        <div class="check-box">
+            <input type="checkbox" class="form-check-input" id="active-filter">
+            <label class="form-check-label" for="active-filter">Aktív rendelések listázása</label>
+        </div>
+
+        <div id="main-div"></div>
+        <div id="template" style="display: none">
+            <div id="order-list">
+                <div class="col-md-12">
+                    <center>
+                        <div class="col-md-10">
+                            <div class="panel-group" id="accordion5" role="tablist" aria-multiselectable="true">
+                                <div class="panel panel-default">
+                                    {{#each orders}}
+                                    <div class="panel-heading" role="tab" id="headingOne5-{{id}}">
+                                        <div class="buttons-div row">
+                                            {{#ifValue orderStatus "ACTIVE"}}
+                                            <button onclick=changeStatusToDelivered({{id}}) class="btn btn-warning" id="button2">
+                                                <i class='fas fa-shipping-fast'></i>
+                                            </button>
+                                            {{/ifValue}}
+                                            {{#notIfValue orderStatus "DELETED"}}
+                                            <button onclick=deleteOrder({{id}}) class="btn btn-warning" id="button1">
+                                                <i class="fa fa-trash" aria-hidden="true"></i>
+                                            </button>
+                                            {{/notIfValue}}
+                                        </div>
+                                        <h4 class="panel-title">
+                                            <p role="button" class="collapsed" data-toggle="collapse" data-parent="#accordion5" href="#order-{{id}}" aria-expanded="false" aria-controls="order-{{id}}">
+                                                {{user.name}} - {{dateformatter date}}, {{sum}} Ft, {{modifStatus orderStatus}}
+                                            </p>
+                                        </h4>
+                                    </div>
+                                    <div id="order-{{id}}" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne5-{{id}}">
+                                        <div class="panel-body">
+                                        {{#each orderItemList}}
+                                            <div class="inner-data">
+                                                <button onclick=deleteOrderItem({{../id}},'{{product.address}}') type="button" class="close" aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                                <p>Termék neve: {{product.name}} <br> Termék egységára: {{product.price}} Ft <br> Megrendelt mennyiség: {{quantity}} db</p>
+                                            </div>
+                                        {{/each}}
+                                            <div>
+                                                <p>Szállítási cím: {{deliveryAddress}}</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    {{/each}}
+                                </div>
+                            </div>
+                        </div>
+                    </center>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</main>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.1.1/handlebars.min.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/orders.js"></script>
+</body>
+</html>

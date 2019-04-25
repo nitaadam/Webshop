@@ -1,0 +1,145 @@
+body::after {
+    background: url("/img/bggggr.jpg");
+    background-size: 100% 100%;
+    content: "";
+    position: fixed;
+    filter: blur(2px);
+    opacity: 0.8;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    z-index: -1;
+}
+
+table {
+ margin: 50px auto !important;
+}
+
+#product-div {
+    margin: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.floatLeft {
+        box-shadow: 1px 1px 5px 0 rgba(0, 0, 0, 0.8), 0 3px 10px 0 rgba(0, 0, 0, 0.4);
+        border-radius: 35px;
+        padding: 20px;
+        text-align: center;
+        background-color: white;
+        color: #2B2B2C;
+        width: 70rem;
+        display: flex;
+        align-items: center;
+        margin: auto;
+}
+#feedback-area{
+    width: 100%;
+    margin: 50px auto !important;
+}
+
+.center {
+   margin: auto;
+   width: 90%;
+   padding: 10px;
+}
+
+main {
+    margin-bottom: 40em;
+    width: 100%;
+    text-align :left;
+    color: #3C3D3E;
+    font-family: "Ubuntu",sans-serif;
+}
+
+#back-to-main-page {
+    margin-left: 60px;
+}
+
+.checked {
+    color: #ffd700;
+}
+
+.feedback-control{
+    display:center;
+    width:300px;
+    height:70px;
+    line-height:1;
+    color:#495057;
+    border:1.5px solid #ced4da;border-radius:.25rem;
+    transition:border-color .15s ease-in-out,box-shadow .30s ease-in-out
+}
+
+.plus-minus-input {
+   justify-content: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.plus-minus-input .input-group-field {
+  text-align: center;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+
+.plus-minus-input .input-group-field::-webkit-inner-spin-button,
+.plus-minus-input .input-group-field ::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+          appearance: none;
+}
+
+.plus-minus-input .input-group-button .circle {
+  border-radius: 50%;
+  padding: 0.25em 0.8em;
+}
+
+.input-number{
+    width: 10%;
+}
+
+#name-td {
+    font-size: 200%;
+}
+
+#manufacturer-td,
+#code-td,
+#category-td {
+    font-size: 140%;
+}
+
+#price-td {
+    font-size: 180%;
+}
+
+#sendFeedback {
+    margin-top:30px;
+    text-align: center;
+}
+
+.small_pics {
+    border-radius: 35px;
+    width: 500px;
+    height: 500px;
+}
+
+#feedbackTextInput{
+    margin-top:20px;
+    margin-left:auto;
+    margin-right:auto;
+    width:30rem;
+}
+
+#buttons{
+    margin-top: 30px;
+}
+
+#feedbacksDiv {
+    font-size: 20px;
+}
+
+.name-and-date-review {
+    font-weight: bold;
+}

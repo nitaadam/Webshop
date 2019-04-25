@@ -1,0 +1,134 @@
+ body::after {
+     background: url("/img/blueish.png");
+     background-size: 100% 100%;
+     content: "";
+     filter: brightness(1.9);
+     filter: contrast(1.6);
+     filter: blur(5px);
+     opacity: 0.4;
+     position: fixed;
+     top: 0;
+     bottom: 0;
+     right: 0;
+     left: 0;
+     z-index: -1;
+ }
+
+#accordion5 .panel{
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    margin: 0 0 15px 50px;
+}
+
+#accordion5 .panel .panel-default {
+    width: 820px;
+    height: 48px;
+}
+
+#accordion5 .panel-title p{
+    display: block;
+    padding: 10px 20px 10px 60px;
+    background: #ffee58 ;
+    border-radius: 30px;
+    border: 2px solid #ffee58;
+    font-size: 20px;
+    font-weight:400;
+    color: #000;
+    position: relative;
+    text-decoration: none;
+    list-style-type: none;
+    cursor:pointer
+
+}
+#accordion5 .panel-title p.collapsed{
+    border: 1px solid #ffffff;
+    background: #ffee58 ;
+    color: #000;
+    text-decoration: none;
+    list-style-type: none;
+    cursor:pointer
+}
+#accordion5 .panel-title p:before,
+#accordion5 .panel-title p.collapsed:before{
+    content: "\f068";
+    /*font-family: "Font Awesome 5 Free";*/
+    font-weight: 900;
+    width: 60px;
+    height: 60px;
+    line-height: 60px;
+    border-radius: 50%;
+    background: #ffee58;
+    font-size: 18px;
+    color: #000;
+    text-align: center;
+    border-right: 1px solid #ffffff;
+    position: absolute;
+    top: -10px;
+    left: -30px;
+    transition: all 0.3s ease 0s;
+    cursor:pointer
+}
+#accordion5 .panel-title p.collapsed:before{
+    content: "\f067";
+    background: #ffee58 ;
+    border: 1px solid #ffffff;
+    cursor:pointer
+}
+#accordion5 .panel-body{
+    padding: 10px 15px 0;
+    margin: 0 0 0 30px;
+    border: none;
+    font-size: 14px;
+    color: #333;
+    line-height: 28px;
+    position: relative;
+}
+#accordion5 .panel-body:before{
+    content: "";
+    display: block;
+    width: 5px;
+    height: 90%;
+    background: #ffee58 ;
+    position: absolute;
+    top: 0;
+    left: -30px;
+}
+#accordion5 .panel-body:after{
+    content: "";
+    border-top: 20px solid #ffee58;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    position: absolute;
+    bottom: 0;
+    left: -48px;
+}
+
+main {
+    margin-bottom: 40em;
+    color: #3C3D3E;
+    font-family: "Ubuntu",sans-serif;
+}
+
+.close{
+    position:relative;
+}
+
+.inner-data{
+    text-align: left;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.buttons-div{
+    position: absolute;
+    right: -120px;
+}
+
+#button1, #button2{
+    margin: 5px;
+}
+
+.check-box{
+    margin: 35px;
+}
